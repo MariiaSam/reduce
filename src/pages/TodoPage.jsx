@@ -1,22 +1,23 @@
 import { useDispatch, useSelector } from "react-redux"
+import { addCounterAction } from "store/counter/actions"
+
+
 
 const TodoPage = () => {
 
-//    const state =  useSelector((state) =>state)
-//    console.log('state', state)
-
-const {counter} =  useSelector((state) =>state)
+const state =  useSelector((state) =>state)
+console.log(state)
 
 const dispatch = useDispatch ()
 
-   const  handlerClick = () => {
-    dispatch({ type: 'addCounter', payload: 100});
+   const  handlerClick = () => { 
+    dispatch(addCounterAction(100));
 }
 
 
 return <>
 
-<button onClick={handlerClick}>{counter}</button></>
+<button onClick={handlerClick}>{0}</button></>
 }
 
-export default TodoPage
+export default TodoPage 

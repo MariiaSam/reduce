@@ -4,7 +4,6 @@ import  '../store/store'
 
 const TodoPage = lazy(() => import('../pages/TodoPage'))
 
-
 export const App = () => {
   return (
     <div
