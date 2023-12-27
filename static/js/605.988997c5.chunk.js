@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_homework_template=self.webpackChunkreact_homework_template||[]).push([[605],{605:function(e,t,n){n.r(t);var r=n(420),u=n(184);t.default=function(){var e=(0,r.v9)((function(e){return e})).counter,t=(0,r.I0)();return(0,u.jsx)(u.Fragment,{children:(0,u.jsx)("button",{onClick:function(){t({type:"addCounter",payload:100})},children:e})})}}}]);
+//# sourceMappingURL=605.988997c5.chunk.js.map
