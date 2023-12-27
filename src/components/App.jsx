@@ -1,3 +1,10 @@
+import React, { Suspense, lazy } from 'react'
+import { Route, Routes } from 'react-router-dom'
+import  '../store/store'
+
+const TodoPage = lazy(() => import('../pages/TodoPage'))
+
+
 export const App = () => {
   return (
     <div
@@ -10,7 +17,16 @@ export const App = () => {
         color: '#010101'
       }}
     >
-      React homework template
+
+      <Suspense fallback={<>loading</> }>
+     
+      <Routes>
+      <Route path='todo' element={<TodoPage />} />
+
+
+      </Routes>
+       </Suspense>
+     Redux
     </div>
   );
 };
