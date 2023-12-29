@@ -1,6 +1,7 @@
 
 import { combineReducers, createStore } from 'redux'
-import { reducerCounter } from './counter/reducerCounter'
+// import { reducerCounter } from './counter/reducerCounter'
+import { reducerCounter } from './counterToolkir/reducerCounter'
 import { reducerTodo} from './todo/reducerTodo'
 
 

@@ -14,7 +14,6 @@ const dispatch = useDispatch ()
     dispatch(addCounterAction(100));
 }
 
-
 return <>
 
 <button onClick={handlerClick}>{0}</button></>

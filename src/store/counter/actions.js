@@ -9,3 +9,5 @@ export const decrementCounterAction = (number) => {
     return{ type: DECREMENT, payload: number}
 
 } 
+
+
