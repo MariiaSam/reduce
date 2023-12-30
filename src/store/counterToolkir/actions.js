@@ -1,4 +1,3 @@
-import { INCREMENT, DECREMENT } from "./types"
 import { createAction } from "@reduxjs/toolkit"
 
 // export const addCounterAction = (number) => {
@@ -8,6 +7,6 @@ import { createAction } from "@reduxjs/toolkit"
 
 
 
-export const addCounterAction = createAction(INCREMENT)
+export const addCounterAction = createAction('counter/increment')
 
-export const decrementCounterAction = createAction(DECREMENT)
+export const decrementCounterAction = createAction('counter/decrement')

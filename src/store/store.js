@@ -1,16 +1,17 @@
 
-import { combineReducers, createStore } from 'redux'
+// import { combineReducers } from 'redux'
 // import { reducerCounter } from './counter/reducerCounter'
 import { reducerCounter } from './counterToolkir/reducerCounter'
-import { reducerTodo} from './todo/reducerTodo'
+import { reducerTodo} from './rodoToolkit/reducerTodo'
+import { configureStore } from '@reduxjs/toolkit'
 
-
-const rootReducer = combineReducers({ 
+ 
+const reducer = ({ 
 	counter: reducerCounter,
 	todo: reducerTodo,
 })
 
-export const store = createStore(rootReducer)
+export const store = configureStore({ reducer })
 
 // import { createStore } from 'redux';
 
