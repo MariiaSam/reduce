@@ -1,8 +1,8 @@
 
 // import { combineReducers } from 'redux'
 // import { reducerCounter } from './counter/reducerCounter'
-import { reducerCounter } from './counterToolkir/reducerCounter'
-import { reducerTodo} from './rodoToolkit/reducerTodo'
+import { reducerCounter } from './counterToolkit/reducerCounter'
+import { reducerTodo } from './todoToolkit/reducerTodo'
 import { configureStore } from '@reduxjs/toolkit'
 
  

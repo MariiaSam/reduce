@@ -1,4 +1,4 @@
-import Todo from '../Todo'
+import Todo from "components/Todo/Todo"
 
 const TodoList = ({ todo, deleteTodo, updateTodo }) => {
 	return (
