@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkreact_homework_template=self.webpackChunkreact_homework_template||[]).push([[63],{63:function(e,n,t){t.r(n),t.d(n,{default:function(){return c}});var r=t(420),o=t(184),c=function(){var e=(0,r.v9)((function(e){return e}));console.log(e);var n=(0,r.I0)();return(0,o.jsx)(o.Fragment,{children:(0,o.jsx)("button",{onClick:function(){n({type:"INCREMENT",payload:100})},children:0})})}}}]);
-//# sourceMappingURL=63.6dc8c750.chunk.js.map
