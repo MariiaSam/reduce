@@ -3,7 +3,7 @@
 
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addTodoAction, removeTodoAction, updateTodoAction } from 'store/todoToolkit/actions';
+import { addTodoAction, removeTodoAction, updateTodoAction } from '../store/todoSlice/sliceTodo.js'
 import TodoList from 'components/TodoList/TodoList';
 import FormCreateTodo from 'components/Form/FormCreateTodo';
 
@@ -22,7 +22,7 @@ const TodoPage = () => {
   const createTodo  = (data) => {
     
 dispatch(addTodoAction(data))
-}
+} 
   return (
     <>
         <FormCreateTodo createTodo={createTodo} />

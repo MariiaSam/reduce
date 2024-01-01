@@ -1,17 +1,32 @@
-
 // import { combineReducers } from 'redux'
 // import { reducerCounter } from './counter/reducerCounter'
-import { reducerCounter } from './counterToolkit/reducerCounter'
-import { reducerTodo } from './todoToolkit/reducerTodo'
-import { configureStore } from '@reduxjs/toolkit'
+import { reducerCounter } from './counterToolkit/reducerCounter';
+import { todoReducer } from './todoSlice/sliceTodo.js';
+// import { reducerTodo } from './todoToolkit/reducerTodo'
+import { configureStore } from '@reduxjs/toolkit';
+import { persistStore, persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage'; // defaults to localStorage for web
 
- 
-const reducer = ({ 
-	counter: reducerCounter,
-	todo: reducerTodo,
-})
+// const reducer = ({
+// 	counter: reducerCounter,
+// 	todo: reducerTodo, 
+// })
 
-export const store = configureStore({ reducer })
+const persistConfig = {
+  key: 'todo',
+  storage,
+  whiteList:['todo'],
+};
+
+const persistedReducer = persistReducer(persistConfig, todoReducer);
+
+const reducer = {
+  counter: reducerCounter,
+  todo: persistedReducer,
+};
+
+export const store = configureStore({ reducer });
+export const persistor = persistStore(store);
 
 // import { createStore } from 'redux';
 
@@ -26,7 +41,6 @@ export const store = configureStore({ reducer })
 //       ...state,
 //       users: action.payload,
 //     };
-
 
 //   }
 
